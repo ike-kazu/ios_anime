@@ -11,7 +11,7 @@ import SwiftUI
 struct AnimeiOSAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(isLoggedIn: .constant(true))
         }
     }
 }

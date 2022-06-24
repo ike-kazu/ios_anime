@@ -1,21 +1,26 @@
 //
-//  ContentView.swift
+//  RootView.swift
 //  AnimeiOSApp
 //
 //  Created by Fumiya Tanaka on 2022/06/24.
 //
 
 import SwiftUI
+import Domain
 
-struct ContentView: View {
+struct RootView: View {
+
+    @Binding var isLoggedIn: Bool
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if isLoggedIn {
+            AnimeListView()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RootView(isLoggedIn: .constant(true))
     }
 }
