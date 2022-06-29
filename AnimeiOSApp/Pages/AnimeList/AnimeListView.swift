@@ -6,16 +6,48 @@
 //
 
 import SwiftUI
+import Domain
 
 struct AnimeListView: View {
 
+    @ObservedObject var state: AnimeListState
+
     var body: some View {
-        SeasonListView()
+        VStack {
+            HStack {
+                ForEach(0..<7) { i in
+                    DayLabel(
+                        dayOfWeek: DayOfWeek(rawValue: i)!,
+                        isSelected: i == state.selectedDayOfWeek.rawValue,
+                        onPressed: {
+                            state.updateDayOfWeek(DayOfWeek(rawValue: i)!)
+                        }
+                    )
+                }
+            }
+            List {
+                ForEach(state.dayAnimes) { anime in
+                    SeasonCardView(season: anime.headSeason, anime: anime.base)
+                        .frame(height: 240)
+                        .listRowInsets(
+                            .init(
+                                .init(
+                                    top: 2,
+                                    leading: 2,
+                                    bottom: 2,
+                                    trailing: 2
+                                )
+                            )
+                        )
+                }
+            }.listStyle(.plain)
+        }
+        .padding()
     }
 }
 
 struct AnimeListView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimeListView()
+        AnimeListView(state: AnimeListState(apiClient: EnvAPIClientKey.defaultValue))
     }
 }

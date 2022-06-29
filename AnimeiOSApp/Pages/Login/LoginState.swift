@@ -11,9 +11,9 @@ import Domain
 class LoginState: ObservableObject {
     @Published var twitterAccessToken: String?
 
-    private let model: LoginModel
+    private let apiClient: APIClient
 
-    init(model: LoginModel) {
-        self.model = model
+    init(apiClient: APIClient) {
+        self.apiClient = apiClient
     }
 }

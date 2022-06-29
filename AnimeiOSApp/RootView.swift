@@ -11,10 +11,15 @@ import Domain
 struct RootView: View {
 
     @Binding var isLoggedIn: Bool
+    @Environment(\.apiClient) var apiClient: APIClient
 
     var body: some View {
         if isLoggedIn {
-            AnimeListView()
+            AnimeListView(
+                state: AnimeListState(apiClient: apiClient)
+            )
+        } else {
+            LoginView(state: LoginState(apiClient: apiClient))
         }
     }
 }

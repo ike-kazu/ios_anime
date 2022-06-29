@@ -41,14 +41,14 @@ public struct SeasonCardView: View {
                         .padding()
                         .foregroundColor(.white)
                         .background(Color.black)
-                        .cornerRadius(16)
+                        .cornerRadius(16, corners: [.topRight, .bottomRight])
                     Spacer()
                     Text(season.startAt.display)
                         .bold()
                         .padding()
                         .foregroundColor(.white)
                         .background(Color.black)
-                        .cornerRadius(16)
+                        .cornerRadius(16, corners: [.topLeft, .bottomLeft])
                         .alignmentGuide(.leading) { d in
                             -proxy.size.width + d.width
                         }
@@ -56,7 +56,6 @@ public struct SeasonCardView: View {
                 .padding(.vertical)
             }
         }
-        .padding()
         .cornerRadius(16)
     }
 }

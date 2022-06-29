@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import Domain
 
 @main
 struct AnimeiOSAppApp: App {
     var body: some Scene {
         WindowGroup {
             RootView(isLoggedIn: .constant(true))
+//                .environment(\.apiClient, APIClientImpl())
         }
     }
 }

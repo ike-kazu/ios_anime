@@ -7,28 +7,19 @@
 
 import SwiftUI
 import Domain
+import StubKit
 
 struct SeasonListView: View {
 
+    @Binding var seasons: [Season]
+    @Binding var anime: Anime
+
     var body: some View {
         List {
-            ForEach(0..<5) { _ in
+            ForEach(seasons) { season in
                 SeasonCardView(
-                    season: Season(
-                        id: 1,
-                        title: "Testtttt",
-                        imageURL: "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/300444/profile-images/1647777640",
-                        outline: "",
-                        animeId: 1,
-                        director: "",
-                        startAt: Date(),
-                        weekNumber: 1
-                    ),
-                    anime: Anime(
-                        id: 1,
-                        title: "Anime Title",
-                        origin: "test"
-                    )
+                    season: season,
+                    anime: anime
                 )
                 .frame(width: 320, height: 240)
             }
@@ -38,6 +29,11 @@ struct SeasonListView: View {
 
 struct SeasonListView_Previews: PreviewProvider {
     static var previews: some View {
-        SeasonListView()
+        SeasonListView(
+            seasons: .constant((0...9).map({ _ in
+                try! Stub.make(Season.self)
+            })),
+            anime: .constant(try! Stub.make(Anime.self))
+        )
     }
 }

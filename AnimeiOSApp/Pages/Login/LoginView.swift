@@ -40,6 +40,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(state: LoginState(model: LoginModelImpl()))
+        LoginView(state: LoginState(apiClient: APIClientImpl()))
     }
 }

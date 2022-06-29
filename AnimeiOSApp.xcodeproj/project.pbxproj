@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3089444286CAADB00829465 /* AnimeListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3089443286CAADB00829465 /* AnimeListState.swift */; };
+		D3089446286CB05400829465 /* DayLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3089445286CB05400829465 /* DayLabel.swift */; };
+		D3089448286CBC1E00829465 /* RoundCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3089447286CBC1E00829465 /* RoundCorner.swift */; };
 		D35110F82865F76F0041ED41 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35110F72865F76F0041ED41 /* LoginView.swift */; };
 		D35110FD2865FAD50041ED41 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = D35110FC2865FAD50041ED41 /* Domain */; };
 		D35111012865FB020041ED41 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35111002865FB020041ED41 /* LoginState.swift */; };
@@ -14,6 +17,7 @@
 		D3511107286611AE0041ED41 /* AnimeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3511106286611AE0041ED41 /* AnimeListView.swift */; };
 		D351110B286611CC0041ED41 /* AnimeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351110A286611CC0041ED41 /* AnimeDetailView.swift */; };
 		D351110E286615AA0041ED41 /* SeasonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351110D286615AA0041ED41 /* SeasonCardView.swift */; };
+		D3D96C7F286C993000D7E405 /* APIClient+Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D96C7E286C993000D7E405 /* APIClient+Env.swift */; };
 		D3F794CD2865F0FB00B84905 /* AnimeiOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F794CC2865F0FB00B84905 /* AnimeiOSAppApp.swift */; };
 		D3F794CF2865F0FB00B84905 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F794CE2865F0FB00B84905 /* RootView.swift */; };
 		D3F794D12865F0FC00B84905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F794D02865F0FC00B84905 /* Assets.xcassets */; };
@@ -21,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3089443286CAADB00829465 /* AnimeListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeListState.swift; sourceTree = "<group>"; };
+		D3089445286CB05400829465 /* DayLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayLabel.swift; sourceTree = "<group>"; };
+		D3089447286CBC1E00829465 /* RoundCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorner.swift; sourceTree = "<group>"; };
 		D35110F72865F76F0041ED41 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D35110FA2865F7ED0041ED41 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Domain; path = AnimeiOSApp/Domain; sourceTree = "<group>"; };
 		D35111002865FB020041ED41 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
@@ -28,6 +35,7 @@
 		D3511106286611AE0041ED41 /* AnimeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeListView.swift; sourceTree = "<group>"; };
 		D351110A286611CC0041ED41 /* AnimeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailView.swift; sourceTree = "<group>"; };
 		D351110D286615AA0041ED41 /* SeasonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonCardView.swift; sourceTree = "<group>"; };
+		D3D96C7E286C993000D7E405 /* APIClient+Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Env.swift"; sourceTree = "<group>"; };
 		D3F794C92865F0FB00B84905 /* AnimeiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F794CC2865F0FB00B84905 /* AnimeiOSAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeiOSAppApp.swift; sourceTree = "<group>"; };
 		D3F794CE2865F0FB00B84905 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -94,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				D3511106286611AE0041ED41 /* AnimeListView.swift */,
+				D3089443286CAADB00829465 /* AnimeListState.swift */,
 			);
 			path = AnimeList;
 			sourceTree = "<group>";
@@ -110,8 +119,18 @@
 			isa = PBXGroup;
 			children = (
 				D351110D286615AA0041ED41 /* SeasonCardView.swift */,
+				D3089445286CB05400829465 /* DayLabel.swift */,
+				D3089447286CBC1E00829465 /* RoundCorner.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D3D96C7D286C992700D7E405 /* Env */ = {
+			isa = PBXGroup;
+			children = (
+				D3D96C7E286C993000D7E405 /* APIClient+Env.swift */,
+			);
+			path = Env;
 			sourceTree = "<group>";
 		};
 		D3F794C02865F0FB00B84905 = {
@@ -119,8 +138,8 @@
 			children = (
 				D35110FA2865F7ED0041ED41 /* Domain */,
 				D3F794CB2865F0FB00B84905 /* AnimeiOSApp */,
-				D3F794CA2865F0FB00B84905 /* Products */,
 				D35110FB2865FAD50041ED41 /* Frameworks */,
+				D3F794CA2865F0FB00B84905 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,11 +154,12 @@
 		D3F794CB2865F0FB00B84905 /* AnimeiOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				D351110C2866159A0041ED41 /* Components */,
-				D35110F92865F7730041ED41 /* Pages */,
 				D3F794CC2865F0FB00B84905 /* AnimeiOSAppApp.swift */,
 				D3F794CE2865F0FB00B84905 /* RootView.swift */,
 				D3F794D02865F0FC00B84905 /* Assets.xcassets */,
+				D351110C2866159A0041ED41 /* Components */,
+				D3D96C7D286C992700D7E405 /* Env */,
+				D35110F92865F7730041ED41 /* Pages */,
 				D3F794D22865F0FC00B84905 /* Preview Content */,
 			);
 			path = AnimeiOSApp;
@@ -167,6 +187,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D3D96C81286C9C5800D7E405 /* PBXTargetDependency */,
 			);
 			name = AnimeiOSApp;
 			packageProductDependencies = (
@@ -227,18 +248,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3089444286CAADB00829465 /* AnimeListState.swift in Sources */,
+				D3089446286CB05400829465 /* DayLabel.swift in Sources */,
 				D351110B286611CC0041ED41 /* AnimeDetailView.swift in Sources */,
 				D35111042866118E0041ED41 /* SeasonListView.swift in Sources */,
 				D35110F82865F76F0041ED41 /* LoginView.swift in Sources */,
+				D3089448286CBC1E00829465 /* RoundCorner.swift in Sources */,
 				D35111012865FB020041ED41 /* LoginState.swift in Sources */,
 				D351110E286615AA0041ED41 /* SeasonCardView.swift in Sources */,
 				D3511107286611AE0041ED41 /* AnimeListView.swift in Sources */,
 				D3F794CF2865F0FB00B84905 /* RootView.swift in Sources */,
 				D3F794CD2865F0FB00B84905 /* AnimeiOSAppApp.swift in Sources */,
+				D3D96C7F286C993000D7E405 /* APIClient+Env.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3D96C81286C9C5800D7E405 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D3D96C80286C9C5800D7E405 /* Domain */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D3F794D52865F0FC00B84905 /* Debug */ = {
@@ -440,6 +472,10 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		D35110FC2865FAD50041ED41 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		D3D96C80286C9C5800D7E405 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
 		};
