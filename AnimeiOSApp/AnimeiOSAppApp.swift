@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import Domain
 
 @main
 struct AnimeiOSAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(isLoggedIn: .constant(true))
         }
     }
 }
