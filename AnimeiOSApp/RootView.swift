@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Domain
+import SFSafeSymbols
 
 struct RootView: View {
 
@@ -15,9 +16,15 @@ struct RootView: View {
 
     var body: some View {
         if isLoggedIn {
-            AnimeListView(
-                state: AnimeListState(apiClient: apiClient)
-            )
+            TabView {
+                AnimeListView(
+                    state: AnimeListState(apiClient: apiClient)
+                ).tabItem {
+                    Image(systemSymbol: .tablecells)
+                    Text("テーブル")
+                }
+                
+            }
         } else {
             LoginView(state: LoginState(apiClient: apiClient))
         }

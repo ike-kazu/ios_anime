@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import StubKit
 import SwiftUI
 import Domain
 
@@ -63,21 +64,8 @@ public struct SeasonCardView: View {
 struct SeasonCardView_Preview: PreviewProvider {
     static var previews: some View {
         SeasonCardView(
-            season: Season(
-                id: 1,
-                title: "Testtttt",
-                imageURL: "https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/300444/profile-images/1647777640",
-                outline: "",
-                animeId: 1,
-                director: "",
-                startAt: Date(),
-                weekNumber: 1
-            ),
-            anime: Anime(
-                id: 1,
-                title: "Anime Title",
-                origin: "test"
-            )
+            season: try! Stub.make(Season.self),
+            anime: try! Stub.make(Anime.self)
         )
         .previewLayout(.fixed(width: 320, height: 240))
     }

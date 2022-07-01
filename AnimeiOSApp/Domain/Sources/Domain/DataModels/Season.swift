@@ -8,12 +8,12 @@
 import Foundation
 
 public struct Season: Codable, Identifiable {
-    public init(id: Int, title: String, imageURL: String, outline: String, animeId: Int, director: String, startAt: Date, weekNumber: Int) {
+    public init(id: Int, title: String, imageURL: String, outline: String, anime: Anime, director: String, startAt: Date, weekNumber: Int) {
         self.id = id
         self.title = title
         self.imageURL = imageURL
         self.outline = outline
-        self.animeId = animeId
+        self.anime = anime
         self.director = director
         self.startAt = startAt
         self.weekNumber = weekNumber
@@ -23,7 +23,7 @@ public struct Season: Codable, Identifiable {
     public var title: String
     public var imageURL: String
     public var outline: String
-    public var animeId: Int
+    public var anime: Anime
     public var director: String
     public var startAt: Date
     public var weekNumber: Int

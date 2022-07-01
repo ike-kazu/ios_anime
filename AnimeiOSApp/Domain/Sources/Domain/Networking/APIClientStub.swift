@@ -15,16 +15,15 @@ public class APIClientStub: APIClient {
                 var season = try! Stub.make(Season.self)
                 season.imageURL = "https://via.placeholder.com/150"
                 season.weekNumber = i % 3
-                season.animeId = i
+                season.anime = anime
                 animes.append(Anime.View(base: anime, headSeason: season))
             }
             return animes as! Response
-        case .getSeasons(let animeID):
+        case .getSeasons:
             var seasons: [Season] = []
             for i in 0..<10 {
                 var season = try! Stub.make(Season.self)
                 season.id = i
-                season.animeId = animeID
                 season.imageURL = "https://via.placeholder.com/150"
                 seasons.append(season)
             }
@@ -33,9 +32,8 @@ public class APIClientStub: APIClient {
             var anime = try! Stub.make(Anime.self)
             anime.id = animeID
             return anime as! Response
-        case .getSeason(let animeID, let seasonID):
+        case .getSeason(let seasonID):
             var season = try! Stub.make(Season.self)
-            season.animeId = animeID
             season.imageURL = "https://via.placeholder.com/150"
             season.id = seasonID
             return season as! Response

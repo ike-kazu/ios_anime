@@ -10,6 +10,7 @@ import Domain
 
 class LoginState: ObservableObject {
     @Published var twitterAccessToken: String?
+    @Published var redirectTwitterURL: URL?
 
     private let apiClient: APIClient
 

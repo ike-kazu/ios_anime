@@ -18,6 +18,7 @@
 		D351110B286611CC0041ED41 /* AnimeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351110A286611CC0041ED41 /* AnimeDetailView.swift */; };
 		D351110E286615AA0041ED41 /* SeasonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351110D286615AA0041ED41 /* SeasonCardView.swift */; };
 		D3D96C7F286C993000D7E405 /* APIClient+Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D96C7E286C993000D7E405 /* APIClient+Env.swift */; };
+		D3E880CC286F568C00210D24 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = D3E880CB286F568C00210D24 /* SFSafeSymbols */; };
 		D3F794CD2865F0FB00B84905 /* AnimeiOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F794CC2865F0FB00B84905 /* AnimeiOSAppApp.swift */; };
 		D3F794CF2865F0FB00B84905 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F794CE2865F0FB00B84905 /* RootView.swift */; };
 		D3F794D12865F0FC00B84905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F794D02865F0FC00B84905 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E880CC286F568C00210D24 /* SFSafeSymbols in Frameworks */,
 				D35110FD2865FAD50041ED41 /* Domain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +194,7 @@
 			name = AnimeiOSApp;
 			packageProductDependencies = (
 				D35110FC2865FAD50041ED41 /* Domain */,
+				D3E880CB286F568C00210D24 /* SFSafeSymbols */,
 			);
 			productName = AnimeiOSApp;
 			productReference = D3F794C92865F0FB00B84905 /* AnimeiOSApp.app */;
@@ -222,6 +225,9 @@
 				Base,
 			);
 			mainGroup = D3F794C02865F0FB00B84905;
+			packageReferences = (
+				D3E880CA286F568C00210D24 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+			);
 			productRefGroup = D3F794CA2865F0FB00B84905 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -470,6 +476,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		D3E880CA286F568C00210D24 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SFSafeSymbols/SFSafeSymbols";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		D35110FC2865FAD50041ED41 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -478,6 +495,11 @@
 		D3D96C80286C9C5800D7E405 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
+		};
+		D3E880CB286F568C00210D24 /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3E880CA286F568C00210D24 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -3,9 +3,9 @@ import Moya
 
 public enum AnimeTarget {
     case getAnimes
-    case getSeasons(animeID: Int)
+    case getSeasons
     case getAnime(animeID: Int)
-    case getSeason(animeID: Int, seasonID: Int)
+    case getSeason(seasonID: Int)
 }
 
 /// @mockable
@@ -33,16 +33,39 @@ public actor APIClientImpl: APIClient {
 }
 
 extension AnimeTarget: TargetType {
+
+    private var apiBaseURL: String {
+        Secret.apiBaseURL
+    }
+
     public var baseURL: URL {
-        fatalError()
+        URL(string: apiBaseURL)!
     }
 
     public var path: String {
-        fatalError()
+        switch self {
+        case .getAnimes:
+            return "/animes"
+        case .getSeasons:
+            return "/seasons"
+        case .getAnime(let animeID):
+            return "/animes/\(animeID)"
+        case .getSeason(let seasonID):
+            return "/animes/\(seasonID)"
+        }
     }
 
     public var method: Moya.Method {
-        fatalError()
+        switch self {
+        case .getAnimes:
+            return .get
+        case .getSeasons:
+            return .get
+        case .getAnime:
+            return .get
+        case .getSeason:
+            return .get
+        }
     }
 
     public var task: Moya.Task {
